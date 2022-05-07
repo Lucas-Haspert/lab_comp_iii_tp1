@@ -11,11 +11,30 @@
     <link rel="stylesheet" href="styles/styles.css">
     
     <!-- Scripts -->
-    
+    <script type = "text/javascript" src = "../lab_comp_iii_tp1/js/helper.js" defer></script>
+    <script type = "text/javascript" src = "../lab_comp_iii_tp1/js/messages.js" defer></script>
+    <script type = "text/javascript" src = "../lab_comp_iii_tp1/js/transactions.js" defer></script>
 </head>
 
 <body>
     
 </body>
+    <!-- Header -->
+    <header>
+        <h1>SIMULADOR PLAZO FIJO</h1>
+    </header>
+
+    <!-- Inputs Section -->
+    <div>
+        <label>Nombre: <input id="firstName" type="text"></label>
+        <label>Apellido: <input id="lastName" type="text"></label>
+        <label>Monto a invertir: <input id="amountToInvest" type="number"></label>
+        <label>Cantidad de días: <input id="daysAmounts" type="number"></label>
+    </div>
+
+    <!-- Buttons Section -->
+    <div>
+        <button id="calculateBtn" type="button" onclick="calculateBtnOnPressed()">Calcular</button>
+    </div>
 
 </html>

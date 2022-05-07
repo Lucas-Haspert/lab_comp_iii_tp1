@@ -25,12 +25,14 @@ function resetBtnOnPressed() {
     let elementLastName = document.getElementById("lastName");
     let elementAmountToInvest = document.getElementById("amountToInvest");
     let elementDaysAmounts = document.getElementById("daysAmounts");
+    let elementResponse = document.getElementById("response");
     
     // Clear the elements
     elementFirstName.value = '';
     elementLastName.value = '';
     elementAmountToInvest.value = '';
     elementDaysAmounts.value = '';
+    elementResponse.firstChild.data = '';
 }
 
 

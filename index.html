@@ -13,7 +13,7 @@
     <!-- Scripts -->
     <script type = "text/javascript" src = "../lab_comp_iii_tp1/js/helper.js" defer></script>
     <script type = "text/javascript" src = "../lab_comp_iii_tp1/js/messages.js" defer></script>
-    <script type = "text/javascript" src = "../lab_comp_iii_tp1/js/transactions.js" defer></script>
+    <script type = "text/javascript" src = "../lab_comp_iii_tp1/js/main.js" defer></script>
 </head>
 
 <body>
@@ -25,16 +25,23 @@
     </header>
 
     <!-- Inputs Section -->
-    <div>
-        <label>Nombre: <input id="firstName" type="text"></label>
-        <label>Apellido: <input id="lastName" type="text"></label>
-        <label>Monto a invertir: <input id="amountToInvest" type="number"></label>
-        <label>Cantidad de días: <input id="daysAmounts" type="number"></label>
+    <div class="gridInputs">
+        <div class="box"><label>Nombre: <input id="firstName" type="text"></label></div>
+        <div class="box"><label>Apellido: <input id="lastName" type="text"></label></div>
+        <div class="box"><label>Monto a invertir: <input id="amountToInvest" type="number"></label></div>
+        <div class="box"><label>Cantidad de días: <input id="daysAmounts" type="number"></label></div>
     </div>
 
     <!-- Buttons Section -->
-    <div>
-        <button id="calculateBtn" type="button" onclick="calculateBtnOnPressed()">Calcular</button>
+    <div class="center">
+        <button id="calculateBtn" class="btn" type="button" onclick="calculateBtnOnPressed()">Calcular</button><br>
+        <button id="reinvestBtn" class="btn" type="button" onclick="reinvestBtnOnPressed()">Reinvertir capital</button><br>
+        <button id="resetBtn" class="btn" type="button" onclick="resetBtnOnPressed()">Reset</button><br>
+    </div>
+
+    <!-- Response Section -->
+    <div id="response" class="center">   
+        
     </div>
 
 </html>

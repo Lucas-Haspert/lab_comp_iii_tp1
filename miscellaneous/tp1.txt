@@ -15,7 +15,7 @@ Si alguna de esas validaciones es inválida, mostrar un mensaje indicando cual e
 
 Si todos los datos son correctos, se tiene que agregar un texto (o similar) debajo en donde indique el monto final que recibir.
 Este es determinado por la siguiente fórmula:
-	monto final = monto inicial + monto inicial * cantidad días360*porcentaje100
+	monto final = monto inicial + monto inicial * (cantidad días/360) *(porcentaje/100)
 
 El porcentaje está determinado por la cantidad de días que se invierte:
 

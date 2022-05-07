@@ -31,5 +31,38 @@ h2,h3,h4,h5,h6,p {
     margin-right: 10px;
 }
 
+.gridInputs{
+    display:grid;
+    margin: auto;
+    height:100px;
+    width:400px;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+  }
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 30px;
+    width: 120px;
+    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 

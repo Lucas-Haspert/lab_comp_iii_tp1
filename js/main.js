@@ -19,6 +19,20 @@ function reinvestBtnOnPressed() {
     
 }
 
+function resetBtnOnPressed() {
+    // Get the elements
+    let elementFirstName = document.getElementById("firstName");
+    let elementLastName = document.getElementById("lastName");
+    let elementAmountToInvest = document.getElementById("amountToInvest");
+    let elementDaysAmounts = document.getElementById("daysAmounts");
+    
+    // Clear the elements
+    elementFirstName.value = '';
+    elementLastName.value = '';
+    elementAmountToInvest.value = '';
+    elementDaysAmounts.value = '';
+}
+
 
 
 

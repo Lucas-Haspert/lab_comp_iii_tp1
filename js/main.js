@@ -16,6 +16,8 @@ function calculateBtnOnPressed() {
 }
 
 function reinvestBtnOnPressed() {
+    calculateBtnOnPressed();
+
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
     let amountToInvest = document.getElementById("amountToInvest").value;

@@ -131,8 +131,8 @@ function calculateFixedTerm(initialAmount, days) {
     }
 
     let result = Number(initialAmount) + Number(initialAmount)  * (Number(days)/360) * (Number(percentage)/100);
-
-    return result;
+    
+    return result.toFixed(2);
 }
 
 function printResponse(pTxt) {

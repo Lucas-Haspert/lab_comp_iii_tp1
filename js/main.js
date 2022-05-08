@@ -16,8 +16,6 @@ function calculateBtnOnPressed() {
 }
 
 function reinvestBtnOnPressed() {
-    calculateBtnOnPressed();
-
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
     let amountToInvest = document.getElementById("amountToInvest").value;
@@ -28,6 +26,8 @@ function reinvestBtnOnPressed() {
     if (!foo) {
         return;
     }
+    
+    calculateBtnOnPressed();
 
     let i = 0;
     let fixedTermResult1, fixedTermResult2, fixedTermResult3 ,fixedTermResult4 = 0;

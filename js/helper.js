@@ -130,7 +130,7 @@ function calculateFixedTerm(initialAmount, days) {
         percentage = 65;
     }
 
-    let result = Number(initialAmount) + Number(initialAmount)  * (Number(days)/360) * (Number(percentage)/100);
+    let result = Number(initialAmount) + Number(initialAmount) * (Number(days)/360) * (Number(percentage)/100);
     
     return result.toFixed(2);
 }
@@ -143,25 +143,25 @@ function printResponse(pTxt) {
 function printResponseTable(amountToInvest, fixedTermResult1, fixedTermResult2 ,fixedTermResult3 ,fixedTermResult4) {
     let table = document.getElementById("responseTable");
     
-    table.rows[0].cells[0].innerHTML = 'Período';
-    table.rows[0].cells[1].innerHTML = 'Monto inicial';
-    table.rows[0].cells[2].innerHTML = 'Monto obtenido';
+    table.rows[0].cells[0].textContent = 'Período';
+    table.rows[0].cells[1].textContent = 'Monto inicial';
+    table.rows[0].cells[2].textContent = 'Monto obtenido';
     
-    table.rows[1].cells[0].innerHTML = '1';
-    table.rows[1].cells[1].innerHTML = amountToInvest;
-    table.rows[1].cells[2].innerHTML = fixedTermResult1;
+    table.rows[1].cells[0].textContent = '1';
+    table.rows[1].cells[1].textContent = amountToInvest;
+    table.rows[1].cells[2].textContent = fixedTermResult1;
 
-    table.rows[2].cells[0].innerHTML = '2';
-    table.rows[2].cells[1].innerHTML = fixedTermResult1;
-    table.rows[2].cells[2].innerHTML = fixedTermResult2;
+    table.rows[2].cells[0].textContent = '2';
+    table.rows[2].cells[1].textContent = fixedTermResult1;
+    table.rows[2].cells[2].textContent = fixedTermResult2;
 
-    table.rows[3].cells[0].innerHTML = '3';
-    table.rows[3].cells[1].innerHTML = fixedTermResult2;
-    table.rows[3].cells[2].innerHTML = fixedTermResult3;
+    table.rows[3].cells[0].textContent = '3';
+    table.rows[3].cells[1].textContent = fixedTermResult2;
+    table.rows[3].cells[2].textContent = fixedTermResult3;
 
-    table.rows[4].cells[0].innerHTML = '4';
-    table.rows[4].cells[1].innerHTML = fixedTermResult3;
-    table.rows[4].cells[2].innerHTML = fixedTermResult4;
+    table.rows[4].cells[0].textContent = '4';
+    table.rows[4].cells[1].textContent = fixedTermResult3;
+    table.rows[4].cells[2].textContent = fixedTermResult4;
 }
 
 

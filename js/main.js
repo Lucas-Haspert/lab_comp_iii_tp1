@@ -1,8 +1,8 @@
 function calculateBtnOnPressed() {
-    let firstName = document.getElementById("firstName").textContent;
-    let lastName = document.getElementById("lastName").textContent;
-    let amountToInvest = document.getElementById("amountToInvest").textContent;
-    let daysAmounts = document.getElementById("daysAmounts").textContent;
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    let amountToInvest = document.getElementById("amountToInvest").value;
+    let daysAmounts = document.getElementById("daysAmounts").value;
 
     let foo = checkFields(firstName, lastName, amountToInvest, daysAmounts);
 
@@ -16,10 +16,10 @@ function calculateBtnOnPressed() {
 }
 
 function reinvestBtnOnPressed() {
-    let firstName = document.getElementById("firstName").textContent;
-    let lastName = document.getElementById("lastName").textContent;
-    let amountToInvest = document.getElementById("amountToInvest").textContent;
-    let daysAmounts = document.getElementById("daysAmounts").textContent;
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    let amountToInvest = document.getElementById("amountToInvest").value;
+    let daysAmounts = document.getElementById("daysAmounts").value;
 
     let foo = checkFields(firstName, lastName, amountToInvest, daysAmounts);
 
@@ -64,10 +64,10 @@ function resetBtnOnPressed() {
     let elementResponseTable = document.getElementById("responseTable");
     
     // Clear inputs
-    elementFirstName.textContent = '';
-    elementLastName.textContent = '';
-    elementAmountToInvest.textContent = '';
-    elementDaysAmounts.textContent = '';
+    elementFirstName.value = '';
+    elementLastName.value = '';
+    elementAmountToInvest.value = '';
+    elementDaysAmounts.value = '';
 
     // Clear response
     elementResponse.firstChild.data = '';
@@ -93,7 +93,3 @@ function resetBtnOnPressed() {
     elementResponseTable.rows[4].cells[1].textContent = '';
     elementResponseTable.rows[4].cells[2].textContent = '';
 }
-
-
-
-

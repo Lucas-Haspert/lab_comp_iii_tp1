@@ -163,5 +163,3 @@ function printResponseTable(amountToInvest, fixedTermResult1, fixedTermResult2 ,
     table.rows[4].cells[1].textContent = fixedTermResult3;
     table.rows[4].cells[2].textContent = fixedTermResult4;
 }
-
-

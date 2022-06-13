@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Primer/Segundo trabajo práctico</title>
+    <title>Primer trabajo práctico</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding"> 
     <meta name="author" content="Lucas Haspert">
@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="styles/styles.css">
     
     <!-- Scripts -->
-    <script type = "text/javascript" src = "js/helper.js" defer></script>
-    <script type = "text/javascript" src = "js/messages.js" defer></script>
-    <script type = "text/javascript" src = "js/main.js" defer></script>
+    <script src="https://unpkg.com/vue@3" defer></script>
+    <script type = "text/javascript" src = "../lab_comp_iii_tp1/js/main.js" defer></script>
 </head>
 
 <body>
@@ -24,59 +23,62 @@
         <h1>SIMULADOR PLAZO FIJO</h1>
     </header>
 
-    <!-- Inputs Section -->
-    <div class="gridInputs">
-        <div class="box"><label>Nombre: <input id="firstName" type="text"></label></div>
-        <div class="box"><label>Apellido: <input id="lastName" type="text"></label></div>
-        <div class="box"><label>Monto a invertir: <input id="amountToInvest" type="number"></label></div>
-        <div class="box"><label>Cantidad de días: <input id="daysAmounts" type="number"></label></div>
-    </div>
+    <div id="app">
 
-    <!-- Buttons Section -->
-    <div class="center">
-        <button id="calculateBtn" class="btn" type="button" onclick="calculateBtnOnPressed()">Calcular</button><br>
-        <button id="reinvestBtn" class="btn" type="button" onclick="reinvestBtnOnPressed()">Reinvertir capital</button><br>
-        <button id="resetBtn" class="btn" type="button" onclick="resetBtnOnPressed()">Reset</button><br>
-    </div>
+        <!-- Inputs Section -->
+        <div class="gridInputs">
+            <div class="box"><label>Nombre: <input v-model="firstName" type="text" placeholder="Ingrese su nombre"></label></div>
+            <div class="box"><label>Apellido: <input v-model="lastName" type="text" placeholder="Ingrese su apellido"></label></div>
+            <div class="box"><label>Monto a invertir: <input v-model="amountToInvest" type="number"></label></div>
+            <div class="box"><label>Cantidad de días: <input v-model="daysAmounts" type="number"></label></div>
+        </div>
 
-    <!-- Response Section -->
-    <div id="response" class="center">   
-        
-    </div>
+        <!-- Buttons Section -->
+        <div class="center">
+            <button id="calculateBtn" class="btn" type="button" @click="calculateBtnOnPressed">Calcular</button><br>
+            <button id="reinvestBtn" class="btn" type="button" @click="reinvestBtnOnPressed">Reinvertir capital</button><br>
+            <button id="resetBtn" class="btn" type="button" @click="resetBtnOnPressed">Reset</button><br>
+        </div>  
 
-    <div class="center">   
-        <table id="responseTable">
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            
-        </table>
-    </div>
+        <!-- Response Section -->
+        <div id="response" class="center">   
+            <p>{{ response }}</p>
+        </div>
 
+        <!-- ResponseTable Section -->
+        <div id="responseTable" class="center">   
+            <table>
+                <tr>
+                    <th>{{ tbl_r0c0 }}</th>
+                    <th>{{ tbl_r0c1 }}</th>
+                    <th>{{ tbl_r0c2 }}</th>
+                </tr>
+                
+                <tr>
+                    <td>{{ tbl_r1c0 }}</td>
+                    <td>{{ tbl_r1c1 }}</td>
+                    <td>{{ tbl_r1c2 }}</td>
+                </tr>
+                
+                <tr>
+                    <td>{{ tbl_r2c0 }}</td>
+                    <td>{{ tbl_r2c1 }}</td>
+                    <td>{{ tbl_r2c2 }}</td>
+                </tr>
+                
+                <tr>
+                    <td>{{ tbl_r3c0 }}</td>
+                    <td>{{ tbl_r3c1 }}</td>
+                    <td>{{ tbl_r3c2 }}</td>
+                </tr>
+                
+                <tr>
+                    <td>{{ tbl_r4c0 }}</td>
+                    <td>{{ tbl_r4c1 }}</td>
+                    <td>{{ tbl_r4c2 }}</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
 </html>
